@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fedfb0d66e8828138ddf8a5aeddee1c4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fedfb0d66e8828138ddf8a5aeddee1c4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fedfb0d66e8828138ddf8a5aeddee1c4 = L.map(
+                "map_fedfb0d66e8828138ddf8a5aeddee1c4",
+                {
+                    center: [39.61, -105.7],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_963fe92ca5ead600a2b5cf6cf0497ac2 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fedfb0d66e8828138ddf8a5aeddee1c4);
+        
+    
+            var heat_map_57be0ae2d8a223fd18c79a70b9afa27b = L.heatLayer(
+                [[39.61958, -105.71642], [39.6287, -105.71592], [39.6387, -105.71335], [39.60237, -105.75566], [39.6768, -105.69801], [39.67841, -105.70697], [39.68046, -105.70392], [39.68268, -105.72337], [39.60738, -105.63748], [39.61341, -105.64159], [39.6054, -105.63837], [39.62201, -105.63419], [39.62587, -105.63144], [39.62002, -105.63777], [39.60357, -105.64002], [39.6268, -105.63034], [39.60938, -105.63771], [39.62862, -105.6304], [39.61112, -105.63815], [39.64651, -105.64315], [39.64979, -105.64044], [39.60329, -105.64044], [39.65305, -105.79782], [39.61372, -105.71868], [39.60903, -105.62721], [39.59848, -105.63998], [39.60113, -105.65197], [39.60074, -105.648], [39.59998, -105.65632], [39.60092, -105.64696], [39.59808, -105.65668], [39.59245, -105.64763], [39.62868, -105.82473]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_fedfb0d66e8828138ddf8a5aeddee1c4);
+        
+    
+                var lat_lng_popup_4fbaf0d7f36797c6c139db12d13dd8eb = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_4fbaf0d7f36797c6c139db12d13dd8eb
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_fedfb0d66e8828138ddf8a5aeddee1c4);
+                    }
+                map_fedfb0d66e8828138ddf8a5aeddee1c4.on('click', latLngPop);
+            
+    
+            var marker_5d0ea98fb1777770260d940e9e75415e = L.marker(
+                [39.6338, -105.6368],
+                {}
+            ).addTo(map_fedfb0d66e8828138ddf8a5aeddee1c4);
+        
+    
+        var popup_46afc4225e9f64246a214b77ac576979 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3bf68cef1bf132768dc09559f0f3d92b = $(`<div id="html_3bf68cef1bf132768dc09559f0f3d92b" style="width: 100.0%; height: 100.0%;">Mount Evans</div>`)[0];
+            popup_46afc4225e9f64246a214b77ac576979.setContent(html_3bf68cef1bf132768dc09559f0f3d92b);
+        
+
+        marker_5d0ea98fb1777770260d940e9e75415e.bindPopup(popup_46afc4225e9f64246a214b77ac576979)
+        ;
+
+        
+    
+    
+            var marker_6f4cbcb0c9e4f14fe2c512fd3f8d0248 = L.marker(
+                [39.7392, -105.1439],
+                {}
+            ).addTo(map_fedfb0d66e8828138ddf8a5aeddee1c4);
+        
+    
+        var popup_83f871350d68ff15176ad06124805ad1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa24213b7cabce7905ae39d8f6962684 = $(`<div id="html_fa24213b7cabce7905ae39d8f6962684" style="width: 100.0%; height: 100.0%;">Pikes Peak</div>`)[0];
+            popup_83f871350d68ff15176ad06124805ad1.setContent(html_fa24213b7cabce7905ae39d8f6962684);
+        
+
+        marker_6f4cbcb0c9e4f14fe2c512fd3f8d0248.bindPopup(popup_83f871350d68ff15176ad06124805ad1)
+        ;
+
+        
+    
+</script>
+</html>
